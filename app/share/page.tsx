@@ -1570,7 +1570,7 @@ export default function SharePage() {
               返回验证仪表盘
             </Link>
             <a
-              href="https://gitcode.com/TTFHVV/ttfhw-report"
+              href="https://github.com/computing-TTFHW/ttfhw-base-715"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors"

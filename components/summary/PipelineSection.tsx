@@ -47,7 +47,7 @@ const STAGES: PipelineStage[] = [
 ]
 
 const SKILLS_LINK =
-  'https://gitcode.com/TTFHVV/ttfhw-report/blob/main/README.md'
+  'https://github.com/computing-TTFHW/ttfhw-base-715/blob/main/README.md'
 
 export function PipelineSection() {
   return (

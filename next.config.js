@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/ttfhw-report',
+  basePath: '/ttfhw-base-715',
   images: { unoptimized: true },
 }
 
