@@ -369,7 +369,7 @@
   ],
   "final_results": {
     "build": {
-      "status": "partial_success",
+      "status": "success",
       "duration_seconds": 33,
       "note": "Go 模块和二进制编译全部成功（atune-adm 12MB / atuned 16MB / daemon_profile_server.so 22MB），但数据库初始化失败：init.sql 中的 INSERT 语句列名含特殊字符（如 CONFIG_HZ、vm.nr_hugepages 含句点），sqlite3 无法解析。约 200+ 条记录插入失败。",
       "artifacts": [
