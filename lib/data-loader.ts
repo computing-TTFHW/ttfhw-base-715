@@ -480,13 +480,13 @@ function normalizeStatus(status: any): ResultStatus {
   return 'unknown'
 }
 
-function deriveOverallResultFromStatus(buildStatus: ResultStatus, utStatus: ResultStatus, sampleStatus: ResultStatus): ResultStatus {
-  const sampleRan = sampleStatus !== 'not_run' && sampleStatus !== 'unknown' && sampleStatus !== 'no_tests'
-  const sampleOk = !sampleRan || sampleStatus === 'success'
+function deriveOverallResultFromStatus(buildStatus: ResultStatus, utStatus: ResultStatus, _sampleStatus: ResultStatus): ResultStatus {
+  const buildOk = buildStatus === 'success' || buildStatus === 'partial_success'
   const utEffective = utStatus === 'no_tests' ? 'not_run' : utStatus
+  const utOk = utEffective === 'success' || utEffective === 'partial_success' || utEffective === 'not_run'
 
-  if (buildStatus === 'success' && utStatus === 'success' && sampleOk) return 'success'
-  if (buildStatus === 'success' || buildStatus === 'partial_success' || utEffective === 'success' || utEffective === 'partial_success' || (sampleRan && sampleStatus === 'success')) return 'partial_success'
+  if (buildOk && utOk) return 'success'
+  if (buildOk || utEffective === 'success' || utEffective === 'partial_success') return 'partial_success'
   return 'failed'
 }
 

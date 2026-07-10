@@ -15,6 +15,9 @@ export default function HomePage() {
         <p className="text-slate-500 mt-2">
           TTFHW仓库编译验证结果汇总 - {repos.length}个仓库
         </p>
+        <p className="text-xs text-slate-400 mt-2">
+          成功判定：编译成功或部分成功，且测试成功、部分成功或无法执行 → 成功；编译或测试有一方达标但不同时满足 → 部分成功；否则 → 失败
+        </p>
       </header>
 
       {/* 全流程流水线 */}
