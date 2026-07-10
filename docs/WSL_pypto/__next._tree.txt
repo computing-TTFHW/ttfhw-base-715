@@ -1,2 +1,2 @@
 :HL["/ttfhw-base-715/_next/static/chunks/0dz89xh1ano64.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"repo","param":{"type":"d","key":"WSL_pypto","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"cdyB2LJJdxAEfaPybrWE2"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"repo","param":{"type":"d","key":"WSL_pypto","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"4hCPpKt0NRf_nC1s7jMcS"}
