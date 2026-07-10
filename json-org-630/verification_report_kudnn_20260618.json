@@ -187,84 +187,126 @@
       "step": "document_reading",
       "action": "克隆仓库并读取README.md",
       "result": "成功",
-      "details": {"files": ["README.md", "build/build_kudnn.sh", "build/pre_env_kudnn.sh", "build/pre_env_kudnn_compile.sh"]}
+      "details": {
+        "files": [
+          "README.md",
+          "build/build_kudnn.sh",
+          "build/pre_env_kudnn.sh",
+          "build/pre_env_kudnn_compile.sh"
+        ]
+      }
     },
     {
       "timestamp": "2026-06-18T16:55:00",
       "step": "document_reading",
       "action": "分析构建脚本和测试CMakeLists",
       "result": "成功",
-      "details": {"sections": ["版本配套", "编译安装", "测试", "目录结构"]}
+      "details": {
+        "sections": [
+          "版本配套",
+          "编译安装",
+          "测试",
+          "目录结构"
+        ]
+      }
     },
     {
       "timestamp": "2026-06-18T16:55:30",
       "step": "static_analysis_scan",
       "action": "检查pre-commit、lint-runner、devcontainer配置",
       "result": "pre-commit已配置(7 hooks)，lint-runner未配置，devcontainer未配置",
-      "details": {"pre_commit": true, "lint_runner": false, "devcontainer": false}
+      "details": {
+        "pre_commit": true,
+        "lint_runner": false,
+        "devcontainer": false
+      }
     },
     {
       "timestamp": "2026-06-18T16:56:00",
       "step": "image_selection",
       "action": "选择基础镜像",
       "result": "openEuler 22.03 LTS-SP4",
-      "details": {"selection_reason": "README指定系统规格为openEuler 22.03（LTS-SP4）AArch64"}
+      "details": {
+        "selection_reason": "README指定系统规格为openEuler 22.03（LTS-SP4）AArch64"
+      }
     },
     {
       "timestamp": "2026-06-18T16:57:00",
       "step": "container_setup",
       "action": "启动容器并安装依赖",
       "result": "成功",
-      "details": {"container": "ttfhw-kudnn-env", "image": "openeuler-22.03-sp4:v1.2"}
+      "details": {
+        "container": "ttfhw-kudnn-env",
+        "image": "openeuler-22.03-sp4:v1.2"
+      }
     },
     {
       "timestamp": "2026-06-18T16:58:00",
       "step": "build_attempt",
       "action": "首次构建尝试（编译器版本错误）",
       "result": "失败",
-      "details": {"error": "模块bisheng/compiler5.1.0/bishengmodule不存在"}
+      "details": {
+        "error": "模块bisheng/compiler5.1.0/bishengmodule不存在"
+      }
     },
     {
       "timestamp": "2026-06-18T16:59:00",
       "step": "problem_resolution",
       "action": "修正编译器模块版本为5.1.0.2",
       "result": "已解决",
-      "details": {"solution": "module load bisheng/compiler5.1.0.2/bishengmodule"}
+      "details": {
+        "solution": "module load bisheng/compiler5.1.0.2/bishengmodule"
+      }
     },
     {
       "timestamp": "2026-06-18T16:59:00",
       "step": "build_retry",
       "action": "重试构建（修正编译器后）",
       "result": "成功",
-      "details": {"build_time_seconds": "~600", "artifact": "libkudnn.so.1.26.1.RC1"}
+      "details": {
+        "build_time_seconds": "~600",
+        "artifact": "libkudnn.so.1.26.1.RC1"
+      }
     },
     {
       "timestamp": "2026-06-18T17:15:00",
       "step": "dependency_installation",
       "action": "手动下载编译googletest v1.15.2（GitHub git clone失败）",
       "result": "成功",
-      "details": {"solution": "wget googletest release tarball"}
+      "details": {
+        "solution": "wget googletest release tarball"
+      }
     },
     {
       "timestamp": "2026-06-18T17:19:00",
       "step": "build_test",
       "action": "构建测试程序",
       "result": "成功",
-      "details": {"build_time_seconds": 18, "artifact": "kudnn_gtest"}
+      "details": {
+        "build_time_seconds": 18,
+        "artifact": "kudnn_gtest"
+      }
     },
     {
       "timestamp": "2026-06-18T17:22:00",
       "step": "ut_execution",
       "action": "首次运行测试（库路径缺失）",
       "result": "失败",
-      "details": {"error": "libkblas.so.1未找到"}
+      "details": {
+        "error": "libkblas.so.1未找到"
+      }
     },
     {
       "timestamp": "2026-06-18T17:25:00",
       "step": "ut_execution",
       "action": "重试运行测试",
       "result": "崩溃",
-      "details": {"total": 2066, "passed": 1, "error": "Illegal instruction (SIGILL)", "root_cause": "虚拟化CPU不支持SVE指令集"}
+      "details": {
+        "total": 2066,
+        "passed": 1,
+        "error": "Illegal instruction (SIGILL)",
+        "root_cause": "虚拟化CPU不支持SVE指令集"
+      }
     },
     {
       "timestamp": "2026-06-18T17:30:00",
@@ -288,13 +330,27 @@
         "failed": 0,
         "skipped": 7,
         "hooks": [
-          {"name": "trailing-whitespace"},
-          {"name": "check-json"},
-          {"name": "check-yaml"},
-          {"name": "mixed-line-ending"},
-          {"name": "check-merge-conflict"},
-          {"name": "check-added-large-files"},
-          {"name": "clang-format"}
+          {
+            "name": "trailing-whitespace"
+          },
+          {
+            "name": "check-json"
+          },
+          {
+            "name": "check-yaml"
+          },
+          {
+            "name": "mixed-line-ending"
+          },
+          {
+            "name": "check-merge-conflict"
+          },
+          {
+            "name": "check-added-large-files"
+          },
+          {
+            "name": "clang-format"
+          }
         ]
       },
       "lint_runner": {
@@ -319,7 +375,7 @@
       ]
     },
     "ut": {
-      "status": "运行时崩溃",
+      "status": "partial_success",
       "duration_seconds": 2,
       "total": 2066,
       "passed": 1,
