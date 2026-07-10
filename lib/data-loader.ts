@@ -486,7 +486,7 @@ function deriveOverallResultFromStatus(buildStatus: ResultStatus, utStatus: Resu
   const utOk = utEffective === 'success' || utEffective === 'partial_success' || utEffective === 'not_run'
 
   if (buildOk && utOk) return 'success'
-  if (buildOk || utEffective === 'success' || utEffective === 'partial_success') return 'partial_success'
+  if (buildOk || utOk) return 'partial_success'
   return 'failed'
 }
 
