@@ -482,8 +482,7 @@ function normalizeStatus(status: any): ResultStatus {
 
 function deriveOverallResultFromStatus(buildStatus: ResultStatus, utStatus: ResultStatus, _sampleStatus: ResultStatus): ResultStatus {
   const buildOk = buildStatus === 'success' || buildStatus === 'partial_success'
-  const utEffective = utStatus === 'no_tests' ? 'not_run' : utStatus
-  const utOk = utEffective === 'success' || utEffective === 'partial_success' || utEffective === 'not_run'
+  const utOk = utStatus === 'success' || utStatus === 'partial_success'
 
   if (buildOk && utOk) return 'success'
   if (buildOk || utOk) return 'partial_success'
