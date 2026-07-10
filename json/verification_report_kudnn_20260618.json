@@ -198,7 +198,12 @@
       "action": "克隆仓库并读取README.md",
       "result": "成功",
       "details": {
-        "files": ["README.md", "build/build_kudnn.sh", "build/pre_env_kudnn.sh", "build/pre_env_kudnn_compile.sh"]
+        "files": [
+          "README.md",
+          "build/build_kudnn.sh",
+          "build/pre_env_kudnn.sh",
+          "build/pre_env_kudnn_compile.sh"
+        ]
       }
     },
     {
@@ -207,7 +212,12 @@
       "action": "分析构建脚本和测试CMakeLists",
       "result": "成功",
       "details": {
-        "sections": ["版本配套", "编译安装", "测试", "目录结构"]
+        "sections": [
+          "版本配套",
+          "编译安装",
+          "测试",
+          "目录结构"
+        ]
       }
     },
     {
@@ -330,13 +340,27 @@
         "failed": 0,
         "skipped": 7,
         "hooks": [
-          {"name": "trailing-whitespace"},
-          {"name": "check-json"},
-          {"name": "check-yaml"},
-          {"name": "mixed-line-ending"},
-          {"name": "check-merge-conflict"},
-          {"name": "check-added-large-files"},
-          {"name": "clang-format"}
+          {
+            "name": "trailing-whitespace"
+          },
+          {
+            "name": "check-json"
+          },
+          {
+            "name": "check-yaml"
+          },
+          {
+            "name": "mixed-line-ending"
+          },
+          {
+            "name": "check-merge-conflict"
+          },
+          {
+            "name": "check-added-large-files"
+          },
+          {
+            "name": "clang-format"
+          }
         ]
       },
       "lint_runner": {
@@ -362,7 +386,7 @@
       ]
     },
     "ut": {
-      "status": "failed",
+      "status": "partial_success",
       "duration_seconds": 2,
       "total": 2066,
       "passed": 1,
